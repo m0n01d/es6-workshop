@@ -39,31 +39,6 @@ class TodoApp {
     this.renderAll();
 }
 
-  this.input.addEventListener('keyup', (e) => {
-    if (e.which === 13) {
-      // e.target.value is the inputs text value
-      this.addTodo(e.target.value); // add the todo
-      e.target.value = ''; // reset the text box
-    }
-  }, false);
-
-  this.$el.addEventListener('click', (e) => {
-    // delegeate the event to the span tag with a class of "remove"
-    if ( e.target.classList.contains('remove') ) {
-      // read the id from the data attribute;
-      const id = e.target.dataset.todoid;
-      // loop through all todos filtering out the todo that has
-      // the id of the span's todoid attribute
-      this.todos = this.todos.filter((todo) => todo.id != id);
-      // rerender todos
-      this.renderAll();
-    }
-  });
-
-  // kick things off by rendering the initial todos
-  this.renderAll();
-}
-
   // add todo handles creating a todo object
   addTodo (text) {
     const todo = {
