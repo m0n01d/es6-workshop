@@ -17,7 +17,7 @@ function TodoApp () {
   this.addTodo = function(text) {
     var todo = {
       text: text,
-      id: (this.todos[this.todos.length - 1].id + 1)
+      id: ((this.todos.length) ? (this.todos[this.todos.length - 1].id  + 1) : 0)
     };
     // it generates the id by looking at the last item in the array
     // reading its id and adding 1 to it, so no two todos have the same id
