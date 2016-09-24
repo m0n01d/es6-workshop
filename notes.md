@@ -1,6 +1,6 @@
 ## const let && var
 
-```
+```javascript
 
 const is a read only variable
 let and var are mutable
@@ -30,7 +30,7 @@ console.log(x); => 5
 
 ## arrow fns
 #### arguments
-```
+```javascript
   const myFn = (arg1, arg2) => {
     console.log(arg1, arg2);
   };
@@ -47,7 +47,7 @@ console.log(x); => 5
 ```
 
 #### implicit/explicit return
-```
+```javascript
 const add = (a, b) => {
   return a + b;
 };
@@ -71,7 +71,7 @@ const divide = (a, b) => (
 
 #### this
 arrow fns don't have a `this`
-```
+```javascript
 $('button').on('click', () => {
   $(this).addClass('danger');
   // error "this" does not point to the button
@@ -84,7 +84,7 @@ $('button').on('click', () => {
 ## Destructuring
 
 #### objects
-```
+```javascript
 const person = {
   name: 'Bob',
   age: 40,
@@ -108,7 +108,7 @@ console.log(age);
 ```
 
 #### array Destructuring
-```
+```javascript
 var a, b;
 [a, b, ...rest] = [1, 2, 3, 4, 5];
 console.log(a); // 1
@@ -119,7 +119,7 @@ console.log(rest); // [3, 4, 5]
 
 #### Template Strings/Literals
 
-```
+```javascript
 const { name, age, occupation } = person;
 
 const message = `${name} is ${age} years old. He is a(n) ${occupation}`;
@@ -142,7 +142,7 @@ const html = `
 ```
 
 #### short hand methods
-```
+```javascript
 const myObject = {
   name: 'Dwight',
   sayName() {
