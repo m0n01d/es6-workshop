@@ -42,7 +42,7 @@ class TodoApp {
   // add todo handles creating a todo object
   addTodo (text) {
     const todo = {
-      id: (this.todos[this.todos.length - 1].id + 1),
+      id: ((this.todos.length) ? (this.todos[this.todos.length - 1].id  + 1) : 0),
       text,
     };
     // it generates the id by looking at the last item in the array
